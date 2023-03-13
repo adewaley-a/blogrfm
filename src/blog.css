@@ -45,12 +45,13 @@ body{
 }
 .secund{
     width: 25%;
-    
+    height: fit-content;
     color: white;
     gap: 0px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-top: 1.4%;
+    font-family: Ubuntu;
 }
 .blo{
     width: 40%;
@@ -71,17 +72,77 @@ body{
     gap: 7px;
     font-family: Ubuntu, sans-serif;
 }
+.pt2{
+    height: 184px;
+    width: 163px;
+    background-color: white;
+    border-radius: 6.5px;
+    color: black;
+    position: absolute;
+    left: 240px;
+    top: 67px;
+    box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.326);
+}
+
+#pt31{
+    margin-top: 24px;
+    margin-left: 24px;
+}
+#pt31:hover{
+    font-weight: 700;
+}
 .company{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 7px;
     font-family: Ubuntu, sans-serif;
 }
+.cp2{
+    height: 153px;
+    width: 163px;
+    background-color: white;
+    border-radius: 6.5px;
+    color: black;
+    position: absolute;
+    left: 380px;
+    top: 67px;
+    box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.326);
+}
+
+
+#cp31{
+    margin-top: 24px;
+}
 .connect{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 7px;
     font-family: Ubuntu, sans-serif;
+}
+.c2{
+    height: 130px;
+    width: 163px;
+    background-color: white;
+    border-radius: 6.5px;
+    color: black;
+    position: absolute;
+    left: 530px;
+    top: 67px;
+    box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.326);
+}
+.c3{
+    margin-top: 11px;
+    margin-left: 23px;
+    width: fit-content;
+}
+.c3:hover{
+    font-weight: 700;
+}
+#c31{
+    margin-top: 24px;
+}
+.pr:hover{
+    border-bottom: 3px solid white;
 }
 .thed{
     width: 22%;
@@ -109,6 +170,10 @@ body{
     color:rgb(255, 53, 80) ;
     font-weight: 700;
     font-family: Ubuntu;
+}
+.sin:hover{
+    background-color:  hsl(13, 100%, 72%);
+    color: white;
 }
 .text1{
     position: absolute;
@@ -149,6 +214,10 @@ color: rgb(255, 53, 80);
 font-weight: 700;
 font-family: Ubuntu;
 }
+.btn1st:hover{
+    background-color:  hsl(13, 100%, 72%);
+    color: white;
+}
 .btn2nd{
     height: 38px;
     width: 130px;
@@ -160,6 +229,10 @@ font-family: Ubuntu;
     color: rgb(255, 255, 255) ;
     font-weight: 700;
     font-family: Ubuntu;
+}
+.btn2nd:hover{
+    background-color: white;
+    color: hsl(13, 100%, 72%);
 }
 .secondpage{
     width: 100%;
@@ -327,12 +400,18 @@ span{
     }
 .topmost{
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     text-align: center;
 }
 .ones{
-   margin-top: 20px;
+   height: 36px;
    text-align: center;
+   width: fit-content;
+   margin: auto;
+   line-height: 56px;
+}
+.ones:hover{
+    border-bottom: 2px solid white;
 }
 .wrapper2nd{
     width: 100%;
@@ -342,6 +421,15 @@ span{
 
 
 @media(max-width:576px){
+    .pt2{
+        display: none;
+    }
+    .cp2{
+        display: none;
+    }
+    .c2{
+        display: none;
+    }
 
 .bg{
     background-image: linear-gradient(to bottom, rgb(253, 137, 108), rgb(255, 62, 88));

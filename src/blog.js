@@ -29,13 +29,42 @@ function Blog(){
         <div className="bg">
         <img src = {bgdesk} className = "bgpat"/>
         <img src = {bgmob} className = "bgmob"/>
+        <div className="modal" >
+           <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div> 
+           <div className="menubottom" >
+                <div className="log1" >Login</div>
+                <div className="sin1" >Sign Up</div>
+            </div>      
+        </div>
 
         <nav className="navbar">
             <div className="fest"><img src = {sign} className="blo" /></div>
             <div className="secund">
-                <div className="product" ><div>Product</div> <div><img src ={arrow}/></div></div>
-                <div className="company" ><div>Company</div> <div><img src ={arrow}/></div></div>
-                <div className="connect" ><div>Connect</div> <div><img src ={arrow}/></div></div>
+                <div className="product" ><div  className="pr" >Product</div> <div><img src ={arrow}/></div></div>
+                <div className="pt2" >
+                        <div className="pt3" id = "pt31" >Overview</div>
+                        <div className="c3" >Pricing</div>
+                        <div className="c3" >Marketplace</div>
+                        <div className="c3" >Features</div>
+                        <div className="c3" >Integrations</div>
+                    </div> 
+                <div className="company" ><div className="pr" >Company</div> <div><img src ={arrow}/></div></div>
+                    <div className="cp2" >
+                        <div className="c3" id = "cp31" >About</div>
+                        <div className="c3" >Team</div>
+                        <div className="c3" >Blog</div>
+                        <div className="c3" >Careers</div>
+                    </div>                
+                    <div className="connect" ><div className="pr" >Connect</div> <div><img src ={arrow}/></div></div>
+                    <div className="c2" >
+                        <div className="c3" id = "c31" >Contact</div>
+                        <div className="c3" >Newsletter</div>
+                        <div className="c3" >LinkedIn</div>
+                    </div>
             </div>
             <div className="feth" ></div>
             <div className="thed">
