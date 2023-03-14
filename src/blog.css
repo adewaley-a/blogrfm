@@ -418,9 +418,63 @@ span{
     height: 870px;
     display: flex;
 }
-
+.modal{
+    display: none;
+}
 
 @media(max-width:576px){
+    .modal{
+        display: block;
+        position: absolute;
+        height: fit-content;
+        width: 80%;
+        background-color: white;
+        border-radius: 6px;
+        z-index: 9999999999999;
+        box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.326);
+        left: 10%;
+        right: 10%;
+        top: 120px;
+        padding-top: 30px;
+    }
+    .m1{
+        display: flex;
+        margin-top: 30px;
+        font-weight: 600;
+        font-family: Overpass;
+        width: fit-content;
+        margin: auto;
+        height: 45px;
+    }
+    .ad{
+        height: 17%;
+        margin-left: 12%;
+        margin-top: 9%;
+    }
+    .menubottom{
+        width: 100%;
+        height: 116px;
+         border: 2px solid pink;
+    }
+    .log1{
+        font-weight: 500;
+        font-family: Ubuntu;
+        width: fit-content;
+        margin: auto;
+        height: 40px;
+    }
+    .sin1{
+        font-weight: 600;
+        font-family: Overpass;
+        background-image: linear-gradient(to right, rgb(253, 137, 108), rgb(255, 62, 88));
+        height: 46px;
+        width: 40%;
+        color: white;
+        border-radius: 23px;
+        text-align: center;
+        line-height: 46px;
+        margin: auto;
+    }
     .pt2{
         display: none;
     }
@@ -430,7 +484,30 @@ span{
     .c2{
         display: none;
     }
-
+.concover{
+    background-color: hsla(240, 3%, 79%, 0.411);
+    height: 120px;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 34px;
+    padding-top: 20px;
+    font-family: Overpass;
+    margin-bottom: 32px;
+}
+.comcover{
+    background-color: hsla(240, 3%, 79%, 0.411);
+    height: 150px;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 34px;
+    padding-top: 20px;
+    font-family: Overpass;
+    margin-bottom: 32px;
+}
 .bg{
     background-image: linear-gradient(to bottom, rgb(253, 137, 108), rgb(255, 62, 88));
     width: 100%;
@@ -679,10 +756,12 @@ span{
 .ham{
     display: block;
     position: absolute;
+    z-index: 9999999999999999999;
 }
 .close{
     display: block;
     position: absolute;
+    z-index: 9999999999999999999;
 }
 .lastpage{
     background-color:hsl(237, 23%, 32%) ;

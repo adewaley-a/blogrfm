@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { useState } from "react";
 import './blog.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -13,6 +14,7 @@ import phone from './blogr-landing-page-main/blogr-landing-page-main/images/illu
 import pc from './blogr-landing-page-main/blogr-landing-page-main/images/illustration-laptop-desktop.svg'
 import pcm from './blogr-landing-page-main/blogr-landing-page-main/images/illustration-laptop-mobile.svg'
 import arrow from './blogr-landing-page-main/blogr-landing-page-main/images/icon-arrow-light.svg'
+import arrowd from './blogr-landing-page-main/blogr-landing-page-main/images/icon-arrow-dark.svg'
 import ham from './blogr-landing-page-main/blogr-landing-page-main/images/icon-hamburger.svg'
 import close from './blogr-landing-page-main/blogr-landing-page-main/images/icon-close.svg'
 
@@ -23,23 +25,40 @@ function Blog(){
             AOS.init()
         },[]
     )
+    const[show, setShow] = useState(true)
+    function Handleclick(){
+        setShow(false)
+        if(show==false){setShow(true)}
+    }
 
     return(
         <>
+        {!show?<div className="modal" >
+           
+           <div className="m1" ><div>Product</div><img className="ad" src={arrowd}/></div>
+           <div className="m1" ><div>Company</div><img className="ad" src={arrowd}/></div>
+           <div className="comcover">
+               <div className="com" >About</div>
+               <div className="com" >Team</div>
+               <div className="com" >Blog</div>
+               <div className="com" >Careers</div>
+           </div>
+           <div className="m1" ><div>Connect</div><img className="ad" src={arrowd}/></div>
+           <div className="concover">
+               <div className="con" >Contact</div>
+               <div className="con" >Newsletter</div>
+               <div className="con" >LinkedIn</div>
+           </div>
+       
+      <div className="menubottom" >
+           <div className="log1" >Login</div>
+           <div className="sin1" >Sign Up</div>
+       </div>      
+   </div>:null}
         <div className="bg">
         <img src = {bgdesk} className = "bgpat"/>
         <img src = {bgmob} className = "bgmob"/>
-        <div className="modal" >
-           <div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div> 
-           <div className="menubottom" >
-                <div className="log1" >Login</div>
-                <div className="sin1" >Sign Up</div>
-            </div>      
-        </div>
+       
 
         <nav className="navbar">
             <div className="fest"><img src = {sign} className="blo" /></div>
@@ -69,7 +88,7 @@ function Blog(){
             <div className="feth" ></div>
             <div className="thed">
                 <div className="log" >Login</div> <div className="sin" >Sign Up</div>
-                <img className="ham" src={ham}/><img className="close" src={close}/>
+                 {show?<img className="ham" onClick={Handleclick} src={ham}/>:null}{!show?<img onClick={Handleclick} className="close" src={close}/>:null}
             </div>
         </nav>
 
