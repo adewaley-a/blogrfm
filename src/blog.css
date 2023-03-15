@@ -66,7 +66,7 @@ body{
 .feth{
     width: 33%;
 }
-.product{
+#product{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 7px;
@@ -91,7 +91,7 @@ body{
 #pt31:hover{
     font-weight: 700;
 }
-.company{
+#company{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 7px;
@@ -113,7 +113,7 @@ body{
 #cp31{
     margin-top: 24px;
 }
-.connect{
+#connect{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 7px;
@@ -436,6 +436,17 @@ span{
         right: 10%;
         top: 120px;
         padding-top: 30px;
+        animation: side 0.32s ease-in;
+    }
+    @keyframes side {
+        from{
+            transform: translateX(20px);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0px);
+            opacity: 1;
+        }
     }
     .m1{
         display: flex;
@@ -446,15 +457,60 @@ span{
         margin: auto;
         height: 45px;
     }
+    .adrr{
+        height: 17%;
+        margin-left: 12%;
+        margin-top: 9%;
+    }
+    .adrr2{
+        height: 17%;
+        margin-left: 12%;
+        margin-top: 9%;
+        transform: rotate(180deg);
+        animation: turn 0.2s linear ;
+    }
+    .adr{
+        height: 17%;
+        margin-left: 12%;
+        margin-top: 9%;
+    }
+    .adr2{
+        height: 17%;
+        margin-left: 12%;
+        margin-top: 9%;
+        transform: rotate(180deg);
+        animation: turn 0.2s linear ;
+    }
     .ad{
         height: 17%;
         margin-left: 12%;
         margin-top: 9%;
     }
+    .ad2{
+        height: 17%;
+        margin-left: 12%;
+        margin-top: 9%;
+        transform: rotate(180deg);
+        animation: turn 0.2s linear ;
+    }
+    @keyframes turn {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(-180deg);
+        }
+    }
+    .line{
+        width: 80%;
+        height: 3px;
+        background-color:hsla(240, 3%, 79%, 0.411) ;
+        margin: auto;
+        margin-bottom: 15px;
+    }
     .menubottom{
         width: 100%;
         height: 116px;
-         border: 2px solid pink;
     }
     .log1{
         font-weight: 500;
@@ -499,6 +555,18 @@ span{
 .comcover{
     background-color: hsla(240, 3%, 79%, 0.411);
     height: 150px;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 34px;
+    padding-top: 20px;
+    font-family: Overpass;
+    margin-bottom: 32px;
+}
+.prcover{
+    background-color: hsla(240, 3%, 79%, 0.411);
+    height: 190px;
     width: 80%;
     margin: auto;
     border-radius: 5px;
@@ -592,13 +660,13 @@ span{
 .p1{
 
 }
-.product{
+#product{
     display: none;
 }
-.company{
+#company{
     display: none;
 }
-.connect{
+#connect{
     display: none;
 }
 .design{

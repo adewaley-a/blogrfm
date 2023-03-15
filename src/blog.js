@@ -31,25 +31,50 @@ function Blog(){
         if(show==false){setShow(true)}
     }
 
+    const[play, setPlay] = useState(true)
+    function Handleclick2(){
+        setPlay(false)
+        if(play==false){setPlay(true)}
+    }
+
+    const[playr, setPlayr] = useState(true)
+    function Handleclick3(){
+        setPlayr(false)
+        if(playr==false){setPlayr(true)}
+    }
+
+    const[playrr, setPlayrr] = useState(true)
+    function Handleclick4(){
+        setPlayrr(false)
+        if(playrr==false){setPlayrr(true)}
+    }
+    
     return(
         <>
         {!show?<div className="modal" >
            
-           <div className="m1" ><div>Product</div><img className="ad" src={arrowd}/></div>
-           <div className="m1" ><div>Company</div><img className="ad" src={arrowd}/></div>
-           <div className="comcover">
+           <div className="m1" ><div>Product</div><img className={playrr? "adrr":"adrr2"} onClick={Handleclick4} src={arrowd}/></div>
+          {!playrr? <div className="prcover">
+               <div className="com" >Overview</div>
+               <div className="com" >Pricing</div>
+               <div className="com" >Marketplace</div>
+               <div className="com" >Features</div>
+               <div className="com" >Integrations</div>
+           </div>:null}
+           <div className="m1" ><div>Company</div><img className={playr? "adr":"adr2"} onClick={Handleclick3} src={arrowd}/></div>
+           {!playr?<div className="comcover">
                <div className="com" >About</div>
                <div className="com" >Team</div>
                <div className="com" >Blog</div>
                <div className="com" >Careers</div>
-           </div>
-           <div className="m1" ><div>Connect</div><img className="ad" src={arrowd}/></div>
-           <div className="concover">
+           </div>:null}
+           <div className="m1" ><div>Connect</div><img className={play? "ad":"ad2"} onClick={Handleclick2} src={arrowd}/></div>
+           {!play?<div className="concover">
                <div className="con" >Contact</div>
                <div className="con" >Newsletter</div>
                <div className="con" >LinkedIn</div>
-           </div>
-       
+           </div>:null}
+      <div  className="line" ></div> 
       <div className="menubottom" >
            <div className="log1" >Login</div>
            <div className="sin1" >Sign Up</div>
@@ -63,27 +88,27 @@ function Blog(){
         <nav className="navbar">
             <div className="fest"><img src = {sign} className="blo" /></div>
             <div className="secund">
-                <div className="product" ><div  className="pr" >Product</div> <div><img src ={arrow}/></div></div>
-                <div className="pt2" >
+                <div id="product" className={playrr? "adrr":"adrr2"} onClick={Handleclick4} ><div  className="pr" >Product</div> <div><img  src ={arrow}/></div></div>
+                {!playrr?<div className="pt2" >
                         <div className="pt3" id = "pt31" >Overview</div>
                         <div className="c3" >Pricing</div>
                         <div className="c3" >Marketplace</div>
                         <div className="c3" >Features</div>
                         <div className="c3" >Integrations</div>
-                    </div> 
-                <div className="company" ><div className="pr" >Company</div> <div><img src ={arrow}/></div></div>
-                    <div className="cp2" >
+                    </div>:null}
+                <div id="company" className={playr? "adr":"adr2"} onClick={Handleclick3} ><div className="pr" >Company</div> <div><img src ={arrow}/></div></div>
+                    {!playr?<div className="cp2" >
                         <div className="c3" id = "cp31" >About</div>
                         <div className="c3" >Team</div>
                         <div className="c3" >Blog</div>
                         <div className="c3" >Careers</div>
-                    </div>                
-                    <div className="connect" ><div className="pr" >Connect</div> <div><img src ={arrow}/></div></div>
-                    <div className="c2" >
+                    </div>:null}                
+                    <div id="connect" className={play? "ad":"ad2"} onClick={Handleclick2} ><div className="pr" >Connect</div> <div><img src ={arrow}/></div></div>
+                    {!play?<div className="c2" >
                         <div className="c3" id = "c31" >Contact</div>
                         <div className="c3" >Newsletter</div>
                         <div className="c3" >LinkedIn</div>
-                    </div>
+                    </div>:null}
             </div>
             <div className="feth" ></div>
             <div className="thed">
