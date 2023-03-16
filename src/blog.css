@@ -634,9 +634,10 @@ span{
     width: 130px;
     margin-left: 38%;
     border-radius: 30px;
-    height: 42px;
-    line-height: 42px;
+    height: 44px;
+    line-height: 44px;
     color: rgb(255, 53, 80);
+    font-size: 90%;
     }
     .btn2nd{
         height: 42px;
@@ -645,6 +646,7 @@ span{
         border-radius: 30px;
         line-height: 42px;
         border: 1px solid white;
+        font-size: 90%;
     }
 .un{
     font-size: 220%;
